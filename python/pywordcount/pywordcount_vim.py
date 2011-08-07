@@ -2,15 +2,16 @@
 Vim plugin for configurable live word count.
 """
 import re
+import os
 import pywordcount_core as pywordcount
 
 class VimWordCounter(object):
 
-    def __init__(self, vim,
-                 base_dir="/Users/tadhg/subversion/code/python/vim_scripts/pywordcount"):
+    def __init__(self, vim, base_dir=os.path.dirname( __file__ )):
+
         self.vim = vim
         self.wc = pywordcount.PyWordCounter()
-        self.wc.handle_config(base_dir)
+        self.wc.handle_config("%s/pywordcount" % base_dir)
         self.fast = False
 
     def vim_fast(self, forcerecount=False):
