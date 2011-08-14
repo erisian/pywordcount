@@ -86,7 +86,6 @@ class PyWordCounter(object):
 
         """
         import ConfigParser
-
         plugindir = "%s/plugins/" % base_dir
         sys.path.insert(0, plugindir)
         cp = ConfigParser.ConfigParser()

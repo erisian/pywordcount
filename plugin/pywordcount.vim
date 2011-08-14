@@ -10,7 +10,7 @@ if cdir not in sys.path:
 from pywordcount import pywordcount_vim
 import vim
 
-vwc = pywordcount_vim.VimWordCounter(vim, cdir)
+vwc = pywordcount_vim.VimWordCounter(vim)
 EOP
 function! WordCount() " {{{ WordCount
     python << EOF
