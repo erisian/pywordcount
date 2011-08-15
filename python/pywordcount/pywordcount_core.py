@@ -4,6 +4,7 @@
 """
 Script for word count.
 TODO: check for mode (filetype) and adjust file accordingly.
+TODO: strip dates and other strings consisting only of numerals and /
 """
 import re
 import sys
