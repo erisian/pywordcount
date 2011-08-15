@@ -5,7 +5,9 @@ def pywordcountplugin(text):
     """
     We want to start on the third line, and end at ..container:: date.
     """
-    nothing_below = u".. container:: date"
+    nothing_below = u".. wordcountstop"
+    if not nothing_below in text:
+        nothing_below = u".. container:: date"
     lines = text.split(u"\n")
     if len(lines) > 2:
         lines = lines[2:]
