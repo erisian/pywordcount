@@ -1,49 +1,19 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
-import mpage
+import uris
 
-def test_adjust_for_morning_pages():
+def test_adjust_for_uris():
     cases = [
         (
             u"\n".join([
-                u"one",
+                u"http://tadhg.com/wp/ ",
                 u"two",
                 u"three"
             ]),
-            u""
-        ),
-        (
-            u"\n".join([
-                u"one",
-                u".. container:: main",
-                u"three"
-            ]),
-            u"three"
-        ),
-        (
-            u"\n".join([
-                u"one",
-                u".. container:: main",
-                u"three",
-                u"four",
-            ]),
-            u"three\nfour"
-        ),
-        (
-            u"\n".join([
-                u"one",
-                u".. container:: main",
-                u"three",
-                u"four",
-                u".. whatever",
-                u"five",
-                u".. container:: affirmations",
-                u"six",
-            ]),
-            u"three\nfour\n.. whatever\nfive"
+            u"url \ntwo\nthree"
         ),
     ]
 
     for inp, outp in cases:
-        assert mpage.pywordcountplugin(inp) == outp
+        assert uris.pywordcountplugin(inp) == outp
