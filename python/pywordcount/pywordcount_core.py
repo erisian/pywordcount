@@ -100,11 +100,6 @@ class PyWordCounter(object):
         procs = dict([(k, tolist(procs[k])) for k in procs])
 
         #Get a unique list of the processes and import them
-        try:
-            from sets import Set
-            set = Set
-        except ImportError:
-            pass
         proc_funcs = {}
         for proc in set(sum([v for v in procs.values() if v], [])):
             proc_funcs[proc] = __import__(
