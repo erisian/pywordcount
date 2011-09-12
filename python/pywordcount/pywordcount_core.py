@@ -33,6 +33,7 @@ class PyWordCounter(object):
         u"\xa0",  # non-breaking space
         ">",        # greater than symbol
         "<",        # less than symbol
+        "*",        # asterisk
         "+",        # plus
         "=",        # equals
         "(",        # left parenthesis
