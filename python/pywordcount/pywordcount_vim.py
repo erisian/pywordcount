@@ -155,11 +155,6 @@ class VimWordCounter(object):
         Sets the WordCounter processes to match those specified in the config
         for the current Vim filetype(s).
         """
-        try:
-            from sets import Set
-            set = Set
-        except ImportError:
-            pass
         preprocs = []
         for ft in set(self.filetypes).intersection(self.wc.filetypes.keys()):
             for process in self.wc.filetypes[ft]:
