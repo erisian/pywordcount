@@ -43,6 +43,21 @@ def test_adjust_for_blog():
             ]),
             u"three\nfour\n.. whatever\nfive"
         ),
+        (
+            u"\n".join([
+                u"TITLE",
+                u"-----",
+                u"three",
+                u"four",
+                u".. whatever",
+                u"five",
+                u".. wordcountstop",
+                u"six",
+                u".. container:: date",
+                u"seven",
+            ]),
+            u"three\nfour\n.. whatever\nfive"
+        ),
     ]
 
     for inp, outp in cases:
