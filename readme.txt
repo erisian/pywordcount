@@ -30,8 +30,3 @@ To run it from Vim,
     - map PyWordCount to something
     - to put it in the statusline, do:
 
-Who
-===
-Tadhg O’Higgins
-http://tadhg.com/
-pywordcount@tadhg.com
